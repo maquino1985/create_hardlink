@@ -1,7 +1,6 @@
 import pytest
 from pathlib import Path
 from unittest.mock import patch
-
 from create_hardlink import create_hardlink, MOVIE_DIR, TV_DIR, GAME_DIR, MUSIC_DIR
 
 

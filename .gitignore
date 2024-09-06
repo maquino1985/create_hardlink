@@ -14,7 +14,7 @@ build/
 dist/
 *.egg-info/
 .eggs/
-
+logs.txt
 # Install logs
 pip-log.txt
 pip-delete-this-directory.txt

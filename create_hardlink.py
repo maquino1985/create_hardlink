@@ -1,6 +1,19 @@
 import logging
 from pathlib import Path
 import sys
+import os
+
+script_dir = Path(os.path.dirname(os.path.abspath(__file__)))
+log_file_path = script_dir / 'logs.txt'
+
+logging.basicConfig(
+    level=logging.INFO,  # Set the logging level
+    format='%(asctime)s - %(levelname)s - %(message)s',  # Log message format
+    handlers=[
+        logging.FileHandler(log_file_path),  # Log to file 'logs.txt'
+        logging.StreamHandler(sys.stdout)  # Log to console
+    ]
+)
 
 MOVIE_DIR = '/share/data/movies'
 TV_DIR = '/share/data/tv'
